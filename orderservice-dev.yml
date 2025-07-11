@@ -1,6 +1,6 @@
 spring:
   application:
-    name: order-service
+    name: orderservice
 
   datasource:
     url: jdbc:mysql://localhost:3306/orderdb_dev
@@ -15,7 +15,7 @@ spring:
     database-platform: org.hibernate.dialect.MySQL8Dialect
 
   zipkin:
-    base-url: http://localhost:9411
+    base-url: http://ip172-18-0-45-d1od39q91nsg0087pmog-9411.direct.labs.play-with-docker.com/zipkin
     enabled: true
   sleuth:
     sampler:

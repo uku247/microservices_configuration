@@ -1,11 +1,11 @@
 spring:
   application:
-    name: product-service
+    name: productservice
 
   datasource:
     url: jdbc:mysql://localhost:3306/productdb_dev
     username: root
-    password: Passw0rd@12345
+    password: Passw0rd@1234567890
     driver-class-name: com.mysql.cj.jdbc.Driver
 
   jpa:
@@ -15,8 +15,9 @@ spring:
     database-platform: org.hibernate.dialect.MySQL8Dialect
 
   zipkin:
-    base-url: http://localhost:9411
+    base-url: http://ip172-18-0-45-d1od39q91nsg0087pmog-9411.direct.labs.play-with-docker.com/zipkin
     enabled: true
+
   sleuth:
     sampler:
       probability: 1.0
@@ -39,7 +40,7 @@ management:
     web:
       exposure:
         include: "*"
-        
+
 logging:
   pattern:
     console: "%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %5p [${spring.application.name},%X{traceId},%X{spanId}] %logger{36} - %msg%n"
